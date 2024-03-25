@@ -1,0 +1,17 @@
+kustomize errors such as
+"
+Error: accumulating resources: accumulation err='accumulating resources from '../../base/sales-pod/': 'D:\workspace\go\service\zarf\k8s\base\sales-pod' must resolv
+e to a file': recursed accumulation of path 'D:\workspace\go\service\zarf\k8s\base\sales-pod': accumulating resources: accumulation err='accumulating resources fro
+m './base-sales.yaml': missing Resource metadata': must build at directory: 'D:\workspace\go\service\zarf\k8s\base\sales-pod\base-sales.yaml': file is not director
+y
+"
+1. Check Yaml File structure with Online Resources or Original Resource, yaml validation is not enough
+2. Check Directory Structure of yamls as resource or patch or whatever
+3. Comment yaml little by little to find source of problem
+//---------------------------------------------------------------------
+TraceID
+you could bind your traceIDs to a specific user and keep track of them whats going on
+//---------------------------------------------------------------------
+Panic Handling
+Http Package got panic handling by default but we need panic handling by ourselves,
+because if we dont we lose track of our middlewares
